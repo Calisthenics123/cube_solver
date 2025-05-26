@@ -3,8 +3,11 @@ from RubiksSolver import solver, move  # 패키지 이름에 맞게 조정
 
 app = Flask(__name__)
 
-@app.route('/solve', methods=['GET', 'POST'])
+@app.route('/solve', methods=['GET', 'POST', 'HEAD'])
 def solve():
+    if request.method == 'HEAD':
+        return '', 200  # HEAD 요청은 바디 없이 200만 반환
+        
     if request.method == 'GET':
         return '✅ Server is awake and ready!'  # 간단 응답 (모니터링용)
         
