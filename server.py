@@ -9,9 +9,9 @@ def solve():
         return '✅ Server is awake and ready!'  # 간단 응답 (모니터링용)
         
     if request.method == 'POST':    
-    data = request.get_json()
-    scramble = data['scramble']
-    print("서버에서 받은 스크램블:", scramble)
+        data = request.get_json()
+        scramble = data['scramble']
+        print("서버에서 받은 스크램블:", scramble)
 
     # 기본 (노란색 위 기준)
     solution_yellow = solver.solve_F2L(
