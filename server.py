@@ -3,7 +3,11 @@ from RubiksSolver import solver, move  # 패키지 이름에 맞게 조정
 
 app = Flask(__name__)
 
-@app.route('/solve', methods=['POST'])
+@app.route('/solve', methods=['GET', 'POST'])
+def solve():
+    if request.method == 'GET':
+        return '✅ Server is awake and ready!'  # 간단 응답 (모니터링용)
+        
 def solve():
     data = request.get_json()
     scramble = data['scramble']
