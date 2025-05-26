@@ -8,6 +8,7 @@ def solve():
     if request.method == 'GET':
         return '✅ Server is awake and ready!'  # 간단 응답 (모니터링용)
         
+    if request.method == 'POST':    
     data = request.get_json()
     scramble = data['scramble']
     print("서버에서 받은 스크램블:", scramble)
