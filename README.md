@@ -1,4 +1,8 @@
 [![HitCount](https://hits.dwyl.com/or18/RubiksSolver.svg?style=flat-square)](http://hits.dwyl.com/or18/RubiksSolver)
+
+From https://github.com/or18/RubiksSolver
+or18 RubiksSolver
+
 # RubiksSolver
 Rubik's cube cross, xcross, xxcross, xxxcross, and xxxxcross solver. Last layer(LL) substep solver, LL solver, and LL+AUF solver based on xxxxcross solver are also available. GUI version is also available.
 
