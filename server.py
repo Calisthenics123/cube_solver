@@ -54,9 +54,6 @@ def solve():
         'white_top': solution_white,
     })
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
-
 
 @app.route('/get_memo', methods=['POST'])
 def get_memo():
@@ -119,8 +116,6 @@ def get_memo():
         content_type='application/json'
     )
 
-
 if __name__ == '__main__':
-     app.run(host='0.0.0.0', port=5000, debug=True)
-
+    app.run(host='0.0.0.0', port=5000)
 
