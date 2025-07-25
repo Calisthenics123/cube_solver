@@ -2,7 +2,6 @@ from flask import Flask, request, jsonify
 from RubiksSolver import solver, move  # 패키지 이름에 맞게 조정
 # server.py 최상단에 추가
 from RubiksBlindfolded.utils.scramble_to_sides import scramble_to_sides
-from RubiksBlindfolded import RubiksBlindfolded
 from RubiksBlindfolded.utils.color_to_face_mapper import map_colors_to_faces
 
 app = Flask(__name__)
