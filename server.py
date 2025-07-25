@@ -107,15 +107,13 @@ def get_memo():
     edge_hangul = [edge_map.get(e, e) for e in edge_memo]
     corner_hangul = [corner_map.get(c, c) for c in corner_memo]
 
-    return Response(
-        json.dumps({
-            "edges": edge_memo,
-            "corners": corner_memo,
-            "edges_hangul": edge_hangul,
-            "corners_hangul": corner_hangul
-        }, ensure_ascii=False, indent=2),
-        content_type='application/json'
-    )
+    return jsonify({
+    "edges": edge_memo,
+    "corners": corner_memo,
+    "edges_hangul": edge_hangul,
+    "corners_hangul": corner_hangul
+})
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
